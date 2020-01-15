@@ -5,7 +5,6 @@ ruby '2.6.4'
 gem 'rails', '~> 5.2.4'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
-# instead of gem 'twitter-bootstrap-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'devise-bootstrap-views'

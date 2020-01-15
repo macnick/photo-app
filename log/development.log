@@ -71,3 +71,11 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_up" for ::1 at 2020-01-15 18:53:16 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 3216ms (Views: 3214.8ms | ActiveRecord: 0.0ms)
+
+
