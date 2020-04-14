@@ -1,8 +1,11 @@
-Rails.configuration.stripe = {
-  :publishable_key => ENV['STRIPE_TEST_PUBLISHABLE_KEY'],
-  :secret_key => ENV['STRIPE_TEST_SECRET_KEY']
-  }
+require "stripe"
 
-  Stripe.api_key = Rails.configuration.stripe[:secret_key]
+Rails.configuration.stripe = {
+  :publishable_key => ENV['pk_test_a1dmhoxG0cNkFIasORW69bZq00NRjsO4cr'],
+  :secret_key => ENV['sk_test_MrMmNs51uCQwdabNPkhHwR9U00feO8hJG8']
+  }
   
-  
+Stripe.api_key = "sk_test_MrMmNs51uCQwdabNPkhHwR9U00feO8hJG8"
+
+# list charges
+Stripe::Charge.list()
