@@ -1242,3 +1242,42 @@ Processing by RegistrationsController#create as HTML
 Completed 200 OK in 1519ms (Views: 65.5ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/" for ::1 at 2020-01-27 11:05:17 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 1862ms (Views: 1845.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-27 11:05:26 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (666.7ms)
+Completed 200 OK in 1331ms (Views: 1312.3ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-01-27 11:07:03 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8YNwwrLePFNMRuYe34LbeqyxsdRSgqpBpL+ywRx1irMsEbUBl91IZPdjo6Icr/JDOTE2B2Tk9Ertk9Ehkefxhw==", "user"=>{"email"=>"john@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "payment"=>{"card_number"=>"2223003122003222", "card_cvc"=>"123", "card_expires_month"=>"9", "card_expires_year"=>"2023"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5
+  [1m[36mUser Exists (37.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "john@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:6
+  [1m[36mUser Create (40.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "john@test.com"], ["encrypted_password", "$2a$11$XPVY7iqQCOabk7A7i1hbFeL0zh/qk2WK6liSGpbzC0uIlKPbDTUfC"], ["confirmation_token", "cHsfs5mcuJ7PCCqcsL_n"], ["confirmation_sent_at", "2020-01-27 09:07:03.689127"], ["created_at", "2020-01-27 09:07:03.688704"], ["updated_at", "2020-01-27 09:07:03.688704"]]
+  ↳ app/controllers/registrations_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:12
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/registrations_controller.rb:20
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.1ms)
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:5
+Completed 200 OK in 1750ms (Views: 283.1ms | ActiveRecord: 80.5ms)
+
+
