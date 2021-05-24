@@ -11,7 +11,7 @@ gem 'devise-bootstrap-views'
 gem "font-awesome-rails"
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets-rails'
 gem 'stripe'
