@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.7.1'
 gem 'rails', '~> 5.2.4'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
@@ -11,7 +11,7 @@ gem 'devise-bootstrap-views'
 gem "font-awesome-rails"
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets-rails'
 gem 'stripe'
